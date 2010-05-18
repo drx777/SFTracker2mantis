@@ -6,7 +6,6 @@
   <xsl:template match="/">
     <xsl:variable name="trackers" select="/document/trackers/tracker"/>
       <xsl:for-each select="$trackers">
-<!--        Tracker #<xsl:value-of select="format-number(tracker_id, '0000000')" />:      <xsl:value-of select="name" />-->
           <xsl:variable name="groups" select="./groups/group" />
           <xsl:variable name="categories" select="./categories/category" />
           <xsl:variable name="resolutions" select="./resolutions/resolution" />

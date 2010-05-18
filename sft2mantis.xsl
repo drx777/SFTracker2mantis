@@ -30,10 +30,6 @@
           <xsl:variable name="followUps" select="followups/followup" />
           <issue>
             <profile_id>1</profile_id>
-<!--            <project_id><xsl:value-of select="tracker_id" /></project_id> -->
-<!--            <reporter_username><xsl:value-of select="submitter" /></reporter_username> -->
-<!--            <handler_username><xsl:value-of select="assignee" /></handler_username> -->
-<!--            <id>0</id>-->
             <project><xsl:value-of select="name" /></project>
             <reporter><xsl:value-of select="submitter" /></reporter>
             <handler><xsl:value-of select="assignee" /></handler>
@@ -103,39 +99,6 @@
         </xsl:for-each>
       </xsl:for-each>
     </mantis>
-<!--
-
-    real example:
-
-        <issue>
-        <id>1716</id>
-        <project id="1">fdrpg</project>
-        <reporter id="1">administrator</reporter>
-        <handler id="1">administrator</handler>
-        <priority id="30">normal</priority>
-        <severity id="50">minor</severity>
-        <reproducibility id="10">always</reproducibility>
-        <status id="10">new</status>
-        <resolution id="10">open</resolution>
-        <projection id="10">none</projection>
-        <category id="5">FreedroidRPG</category>
-        <date_submitted>1273608698</date_submitted>
-        <last_updated>1273608698</last_updated>
-        <eta id="10">none</eta>
-        <view_state id="10">public</view_state>
-        <summary>Takeover help should be more graphic</summary>
-        <profile_id>1</profile_id>
-        <description>The current helptext in/for the takeover game could be substantially
-          improved by having 1 or more images explaining exactly what to do. At the minimum
-          a picture to aid the understanding of the text would be great.
-
-          First explaining how to switch sides (arrow keys and mouse wheel) in first
-          countdown phase and explaining it can be a tactical advantage and then onto
-          describing the game.</description>
-    </issue>
-
-
- -->
   </xsl:template>
 
   <xsl:template name="getCategoryId">
