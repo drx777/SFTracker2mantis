@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  See mantisbt/lang/strings_english.txt
+
+  $s_view_state_enum_string = '10:public,50:private';
+
+-->
+<view-states>
+  <view-state id="private">50</view-state>
+  <view-state id="public">10</view-state>
+</view-states>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  See mantisbt/lang/strings_english.txt
+
+  $s_priority_enum_string = '10:none,20:low,30:normal,40:high,50:urgent,60:immediate';
+-->
+<priorities>
+  <priority id="1">
+    <mantis id="10" />
+  </priority>
+  <priority id="2">
+    <mantis id="20" />
+  </priority>
+  <priority id="3">
+    <mantis id="20" />
+  </priority>
+  <priority id="4">
+    <mantis id="30" />
+  </priority>
+  <priority id="5">
+    <mantis id="30" />
+  </priority>
+  <priority id="7">
+    <mantis id="40" />
+  </priority>
+  <priority id="6">
+    <mantis id="40" />
+  </priority>
+  <priority id="8">
+    <mantis id="50" />
+  </priority>
+  <priority id="7">
+    <mantis id="50" />
+  </priority>
+  <priority id="9">
+    <mantis id="60" />
+  </priority>
+  <priority id="8">
+    <mantis id="60" />
+  </priority>
+</priorities>

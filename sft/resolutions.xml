@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  See mantisbt/lang/strings_english.txt
+
+  $s_resolution_enum_string = '
+    10:open,
+    20:fixed,
+    30:reopened,
+    40:unable to reproduce,
+    50:not fixable,
+    60:duplicate,
+    70:no change required,
+    80:suspended,
+    90:won\'t fix';
+
+-->
+<resolutions>
+  <resolution id="1">
+    <name>Fixed</name>
+    <mantis id="20" />
+  </resolution>
+  <resolution id ="2">
+    <name>Invalid</name>
+    <mantis id="70" />
+  </resolution>
+  <resolution id="3">
+    <name>Wont Fix</name>
+    <mantis id="90" />
+  </resolution>
+  <resolution id="4">
+    <name>Later</name>
+    <mantis id="80" />
+  </resolution>
+  <resolution id="5">
+    <name>Remind</name>
+    <mantis id="80" />
+  </resolution>
+  <resolution id="6">
+    <name>Works For Me</name>
+    <mantis id="40" />
+  </resolution>
+  <resolution id="100">
+    <name>None</name>
+    <mantis id="90" />
+  </resolution>
+  <resolution id="101">
+    <name>Duplicate</name>
+    <mantis id="60" />
+  </resolution>
+  <resolution id="102">
+    <name>Accepted</name>
+    <mantis id="10" />
+  </resolution>
+  <resolution id="103">
+    <name>Out of Date</name>
+    <mantis id="90" />
+  </resolution>
+  <resolution id="104">
+    <name>Postponed</name>
+    <mantis id="80" />
+  </resolution>
+  <resolution id="105">
+    <name>Rejected</name>
+  </resolution>
+</resolutions>

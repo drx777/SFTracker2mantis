@@ -1,0 +1,23 @@
+== ABSTRACT ==
+
+SFTracker2mantis is a humble attempt at creating a conversion tool for the sourceforge tracker
+to mantis. The current state is not much more but a proof of concept and first working test.
+
+
+== USAGE ==
+
+# you will have to add every category, otherwise they may get lost
+# to get a list of all categories, run
+$ xsltproc listCategories.xsl sftexport.xml
+
+# you will have to add every reporter with its username, otherwise the admin will be used
+# to get a list of all reporters, run
+$ xsltproc listReporters.xsl sftexport.xml | sort | uniq -c | sort
+
+# to convert a sft export, run
+$ xsltproc sft2mantis.xsl sftexport.xml > mantis.xml
+
+
+== TODO ==
+* try to add support for bug notes or add an option (config.xml) to concat notes to the bug
+  description
