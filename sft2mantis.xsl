@@ -10,6 +10,7 @@
   http://www.fedora-commons.org/confluence/display/~cwilper/2008/09/08/Sourceforge+Tracker+to+Jira+Migration
  -->
 
+  <xsl:param name="CONFIG" select="document('config.xml')" />
   <xsl:param name="DEF_RESOLUTIONS" select="document('sft/resolutions.xml')" />
   <xsl:param name="DEF_VIEW_STATES" select="document('sft/view_states.xml')" />
   <xsl:param name="DEF_STATUSES" select="document('sft/statuses.xml')" />
@@ -75,7 +76,24 @@
             </view_state>
             <summary><xsl:value-of select="summary" /></summary>
             <due_date>1</due_date>
-            <description><xsl:value-of select="details" /></description>
+            <description>
+              <xsl:value-of select="details" />
+              <xsl:if test="count($followUps) &gt; 0 and $CONFIG/config/setting[@id = 'append_comments']">
+
+----------------------------
+comments from SFT
+----------------------------
+                <xsl:for-each select="$followUps">
+comment   #<xsl:value-of select="position()" />
+date:     <xsl:call-template name="isodate"><xsl:with-param name="uts" select="date" /></xsl:call-template>
+reporter: <xsl:value-of select="submitter" />
+note:
+<xsl:value-of select="details" />
+
+----------------------------
+                </xsl:for-each>
+              </xsl:if>
+            </description>
             <bugnotes>
               <xsl:for-each select="$followUps">
                 <bugnote>

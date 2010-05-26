@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <setting id="append_comments" select="true()" />
+</config>
